@@ -1,4 +1,5 @@
-Planet-Simulation-Ursina
+#Planet-Simulation-Ursina
+
 ![Screenshot of the simulation](planetory_model.png)
 
 ##### Features:
