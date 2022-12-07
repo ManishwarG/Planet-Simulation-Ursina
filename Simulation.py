@@ -15,7 +15,7 @@ class Sky(Entity):
 
 app = Ursina()
 
-window.title = 'My Game'                # The window title
+window.title = 'Planet Simulation'                # The window title
 
 
 def update():
@@ -24,7 +24,7 @@ def update():
         planet_.x,planet_.y = planet.update_position(planets)
         points = planet.draw()
         if  points is not None and len(points)>2:
-            curve_renderer = Entity(model=Mesh(vertices=points, mode='line'))
+            orbits = Entity(model=Mesh(vertices=points, mode='line'))
     
 # Our Planet class -- for making planets.
 class Planet():
@@ -133,8 +133,5 @@ planets = [sun, mercury, venus, earth, mars]
 planets_ = [sun_, mercury_, venus_, earth_, mars_]
 
 EditorCamera()
-camera.clip_plane_far = 200000
-
-
 
 app.run()
